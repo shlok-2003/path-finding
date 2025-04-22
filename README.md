@@ -6,11 +6,7 @@ An interactive web application that visualizes s pathfinding algorithms on a dyn
 
 ## 🚀 Features
 
-1. **Dynamic Array Management**  
-   - Adjust the size of the array to visualize sorting on different data scales.  
-   - Regenerate the array with random values for varied testing.
-
-2. **Speed Control**  
+1. **Speed Control**  
    - Choose animation speed: slow, medium, or fast.
 
 ### 🧭 Pathfinding Algorithm Visualization
