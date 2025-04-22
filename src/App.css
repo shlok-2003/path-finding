@@ -1,0 +1,82 @@
+@property --rotate {
+	syntax: "<angle>";
+	initial-value: 132deg;
+	inherits: false;
+}
+
+.home__container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	height: fit-content;
+}
+
+.proj-title {
+	color: #ff1212;
+	font-family: "Italianno", cursive;
+	font-size: 200px;
+}
+
+.home__options {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 80px;
+	padding: 2rem;
+	width: 100vw;
+	border-radius: 30px;
+}
+
+.home__option_card {
+	height: 110px;
+	background: #191c29;
+	width: calc(500px - 4rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	border-radius: 12px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.bg-container {
+	overflow: hidden;
+	padding: 5px;
+	border-radius: 8px;
+	background-image: linear-gradient(
+		var(--rotate),
+		#5ddcff,
+		#3c67e3 43%,
+		#4e00c2
+	);
+	animation: spin 2.5s linear infinite;
+}
+
+.bg-container:hover {
+	background-image: linear-gradient(var(--rotate), #de3163, #d2042d, #ee4b2b);
+	animation: spin 1s linear infinite;
+}
+
+.bg-container > div {
+	transition: 0.2s ease-in;
+}
+
+.bg-container > div:hover {
+	transform: scale(1.01) translateY(-7px);
+	transition: 0.2s ease-in;
+}
+
+@keyframes spin {
+	0% {
+		--rotate: 0deg;
+	}
+	100% {
+		--rotate: 360deg;
+	}
+}

@@ -1,0 +1,171 @@
+.maze__top_container {
+	width: 100vw;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.maze__heading {
+	color: #9c27b0;
+	font-size: 90px;
+	width: fit-content;
+	text-align: center;
+	width: 25%;
+}
+
+.maze__menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100vw;
+	height: 20vh;
+	background-color: black;
+}
+
+.maze__btn_container1 {
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.maze__btn_container2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.maze_container {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 1px;
+}
+
+.maze_small_container {
+	height: 100%;
+	background-color: #d9d9d9;
+}
+
+.maze__node {
+	border: 1px solid turquoise;
+}
+
+.maze__start_node {
+	border: 3px solid black;
+	background: url(../assets/startNode.svg);
+}
+
+/* .maze__start_node > div {
+} */
+
+.maze__finish_node {
+	border: 3px solid black;
+	background: url(../assets/finishNode.svg);
+}
+
+/* .maze__finish_node > div {
+} */
+
+.maze__visited_node {
+	animation: visiting 0.8s ease-in forwards;
+}
+
+.maze__wall_node {
+	background-color: #00004d;
+	animation: fade-in 0.4s ease-in forwards;
+}
+
+.maze__hurdle_node {
+	background-color: #661a1a;
+	animation: fade-in 0.4s ease-in forwards;
+}
+
+.maze__shortest_path_node {
+	animation: shoterst_path_node_traversal 1s ease-in-out forwards;
+}
+
+/* .maze__shortest_path_node > div {
+	animation: run 0.6s ease-in forwards;
+} */
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		scale: 0;
+	}
+
+	100% {
+		opacity: 1;
+		scale: 1;
+	}
+}
+
+@keyframes shoterst_path_node_traversal {
+	0% {
+		background-image: url(../assets/startNode.svg);
+		background-color: #f64f59;
+		opacity: 1;
+		scale: 1;
+	}
+
+	50% {
+		background-image: url(../assets/startNode.svg);
+		background-color: #a18cd1;
+		scale: 0.5;
+		opacity: 0.7;
+	}
+
+	100% {
+		background-image: url(../assets/startNode.svg);
+		background-color: #57c1b5;
+		scale: 1;
+		opacity: 0.9;
+	}
+}
+
+@keyframes run {
+	0% {
+		scale: 1;
+		background: url(../assets/startNode.svg);
+	}
+
+	50% {
+		background: url(../assets/startNode.svg);
+		scale: 1;
+	}
+
+	100% {
+		opacity: 0.5;
+		scale: 1;
+		background: url(../assets/startNode.svg);
+	}
+}
+
+@keyframes visiting {
+	0% {
+		opacity: 0;
+		scale: 0.01;
+	}
+	10% {
+		opacity: 1;
+		scale: 0.2;
+		background-color: #ffe53b;
+	}
+	40% {
+		scale: 0.5;
+		background-color: #0093e9;
+	}
+	100% {
+		background-color: #80d0c7;
+		opacity: 1;
+		scale: 1;
+	}
+}
